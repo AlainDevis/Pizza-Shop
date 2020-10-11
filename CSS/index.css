@@ -68,9 +68,9 @@ body{
 }
 
 .order{
-    height: 350px;
+    height: 450px;
     background-color: rgb(22, 21, 21);
-    color: rgb(251, 235, 11);
+    color: rgb(255, 255, 255);
     padding-top: 20px;
     font-weight: bold;
 }
@@ -118,6 +118,9 @@ body{
     color: #ffffff;
 }
 
+#delivery{
+    margin-top: 10px;
+}
 .footer{
     height: 100px;
     background-color: #0a081f;

@@ -80,13 +80,12 @@ $(document).ready(function() {
 
         var orders = [];
         orders.push(newOrder);
-
     });
-    
+
     $("button#ordercheckout").click(function(event) {
         orders.forEach(displayOrders);
         function displayOrders() {
-            alert(newOrder);
+            alert(orders);
           }
     });
 
