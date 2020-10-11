@@ -34,9 +34,12 @@ function ordertoppings(toppings = []){
 
 //user interface logic
 $(document).ready(function() {
-    $("form#addsize").submit(function(event) {
-        event.preventDefault();
-        var smallSize=document.getElementById('size').value;
-        console.log(smallSize); 
+    
+    
+    $("form#new-order#addsize").submit(function(event) {
+        var small = $("select#size").val();
+        alert(small); 
+         event.preventDefault();
     });
 });
+
