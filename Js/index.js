@@ -58,7 +58,7 @@ Order.prototype.totalPrice = function() {
 
 //user interface logic
 $(document).ready(function() {
-    $("form#new-order").submit(function(event) {
+    $("button#orderbtn").click(function(event) {
         var sizePizza = $("select#size").val();
         var crustPizza = $("select#crust").val();
         var toppingPizza = $("select#toppings").val();
@@ -76,7 +76,19 @@ $(document).ready(function() {
         document.getElementById('size').value="Select The Pizza";
         document.getElementById('crust').value="Select The Crust";
         document.getElementById('toppings').value="Select The Toppings";
-         event.preventDefault();
+        event.preventDefault();
+
+        var orders = [];
+        orders.push(newOrder);
+
     });
+    
+    $("button#ordercheckout").click(function(event) {
+        orders.forEach(displayOrders);
+        function displayOrders() {
+            alert(newOrder);
+          }
+    });
+
 });
 
