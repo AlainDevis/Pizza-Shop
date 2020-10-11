@@ -69,12 +69,12 @@ function Order(size,crust,toppings){
     else if ( toppings == "Goat cheese with arugula and red onion"){
         vthis.toppingsPrice = 800;
     }
-    this.total = parseInt(this.sizePrice) + parseInt(this.crustPrice) + parseInt(this.toppingsPrice);
+    // this.total = parseInt(this.sizePrice) + parseInt(this.crustPrice) + parseInt(this.toppingsPrice);
 }
 
-// Order.prototype.totalPrice = function() {
-//     return this.sizePrice + this.crustPrice + this.toppingsPrice;
-// }
+Order.prototype.totalPrice = function() {
+    return this.sizePrice + this.crustPrice + this.toppingsPrice;
+}
 
 // function ordercrust(crust){
 //     this.crust = crust;
@@ -93,7 +93,14 @@ $(document).ready(function() {
         var toppingPizza = $("select#toppings").val();
         // alert(sizePizza + " " + crustPizza + " " + toppingPizza);
         var newOrder = new Order(sizePizza, crustPizza,toppingPizza);
-        alert(newOrder.total);
+        alert(newOrder.crustPrice);
+
+        $("#show-order").show();
+        $("#show-order h2").text("Your Order");
+        $(".pizza-size").text(newOrder.size +" "+ newOrder.sizePrice +"rwf");
+        $(".pizza-crust").text(newOrder.crust +" "+ newOrder.crustPrice + "rwf" );
+        $(".pizza-toppings").text(newOrder.toppings +" "+ newOrder.toppingsPrice + "rwf");
+
          event.preventDefault();
     });
 });
