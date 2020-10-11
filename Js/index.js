@@ -36,7 +36,7 @@ function ordertoppings(toppings = []){
 $(document).ready(function() {
     
     
-    $("form#new-order#addsize").submit(function(event) {
+    $("form#new-order").submit(function(event) {
         var small = $("select#size").val();
         alert(small); 
          event.preventDefault();
