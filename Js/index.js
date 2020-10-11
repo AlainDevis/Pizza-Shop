@@ -1,24 +1,4 @@
 //business logic
-// var smallSize = 2000;
-// var mediumSize = 4000;
-// var largeSize = 6000;
-
-// var crispy = 500;
-// var stuffed = 800;
-// var glutenFree = 1000;
-
-// var meatTopping1 = 1000;
-// var meatTopping2 = 1200;
-// var meatTopping3 = 1500;
-
-// var seafoodTopping1 = 800;
-// var seafoodTopping2 = 1000;
-// var seafoodTopping3 = 1100;
-
-// var vegTopping1 = 500;
-// var vegTopping2 = 600;
-// var vegTopping3 = 800;
-
 function Order(size,crust,toppings){
     this.size = size;
     this.crust = crust;
@@ -91,7 +71,7 @@ $(document).ready(function() {
         var sizePizza = $("select#size").val();
         var crustPizza = $("select#crust").val();
         var toppingPizza = $("select#toppings").val();
-        // alert(sizePizza + " " + crustPizza + " " + toppingPizza);
+        //alert(sizePizza + " " + crustPizza + " " + toppingPizza);
         var newOrder = new Order(sizePizza,crustPizza,toppingPizza);
         alert(newOrder.toppingsPrice);
 
