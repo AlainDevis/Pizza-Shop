@@ -72,6 +72,10 @@ $(document).ready(function() {
         $(".pizza-crust").text(newOrder.crust +" "+ newOrder.crustPrice + "rwf" );
         $(".pizza-toppings").text(newOrder.toppings +" "+ newOrder.toppingsPrice + "rwf");
         $(".pizza-total-amount").text(newOrder.totalPrice() + "rwf");
+
+        document.getElementById('size').value="Select The Pizza";
+        document.getElementById('crust').value="Select The Crust";
+        document.getElementById('toppings').value="Select The Toppings";
          event.preventDefault();
     });
 });
