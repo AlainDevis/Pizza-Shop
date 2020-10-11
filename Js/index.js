@@ -92,12 +92,12 @@ $(document).ready(function() {
         var crustPizza = $("select#crust").val();
         var toppingPizza = $("select#toppings").val();
         // alert(sizePizza + " " + crustPizza + " " + toppingPizza);
-        var newOrder = new Order(sizePizza, crustPizza,toppingPizza);
-        alert(newOrder.crustPrice);
+        var newOrder = new Order(sizePizza,crustPizza,toppingPizza);
+        alert(newOrder.toppingsPrice);
 
         $("#show-order").show();
         $("#show-order h2").text("Your Order");
-        $(".pizza-size").text(newOrder.size +" "+ newOrder.sizePrice +"rwf");
+        $(".pizza-size").text(newOrder.size +" "+ newOrder.sizePrice + "rwf");
         $(".pizza-crust").text(newOrder.crust +" "+ newOrder.crustPrice + "rwf" );
         $(".pizza-toppings").text(newOrder.toppings +" "+ newOrder.toppingsPrice + "rwf");
 
