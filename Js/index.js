@@ -78,8 +78,8 @@ $(document).ready(function() {
         document.getElementById('toppings').value="Select The Toppings";
         event.preventDefault();
 
-        var orders = [];
-        orders.push(newOrder);
+        // var orders = [];
+        // orders.push(newOrder);
     });
 
     $("button#ordercheckout").click(function(event) {
