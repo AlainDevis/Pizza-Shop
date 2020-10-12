@@ -19,4 +19,4 @@ Technology Used
 * JavaScript
 * CSS
 
-Check out the web here https://alaindevis.github.io/Pizza-Shop/
+Check out the web here h
