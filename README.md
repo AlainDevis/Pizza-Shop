@@ -13,3 +13,8 @@ In order to have access on the project you need the following installations:
 * Git
 * Vs Code
 * Internet
+
+Technology Used
+* HTML
+* JavaScript
+* CSS
