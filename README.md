@@ -1,4 +1,4 @@
-# DELANI STUDIO
+# PizZa ShOp
 
 This project is to build a pizza shop website where a customer can order his/her own pizza according to his preference by choosing the size of the pizza, crust and topping and the website will calculate the total amount
 
@@ -18,3 +18,5 @@ Technology Used
 * HTML
 * JavaScript
 * CSS
+
+Check out the web here https://alaindevis.github.io/Pizza-Shop/
