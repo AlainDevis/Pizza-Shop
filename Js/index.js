@@ -85,7 +85,7 @@ $(document).ready(function() {
     $("button#ordercheckout").click(function(event) {
         orders.forEach(displayOrders);
         function displayOrders() {
-            alert(orders);
+            // alert(orders);
           }
     });
 
