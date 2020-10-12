@@ -76,7 +76,7 @@ $(document).ready(function() {
         var deliveryPizza = $("select#delivery").val();
         //alert(sizePizza + " " + crustPizza + " " + toppingPizza);
         var newOrder = new Order(sizePizza,crustPizza,toppingPizza,deliveryPizza);
-        alert(newOrder.deliveryPrice);
+        // alert(newOrder.deliveryPrice);
         // alert(newOrder.totalPrice());
 
         if (deliveryPizza == "Yes" ){
@@ -84,7 +84,7 @@ $(document).ready(function() {
         }
         
         // alert(deliveryAddress);
-        event.preventDefault();
+        // event.preventDefault();
 
         // var orders = [];
         // orders.push(newOrder);
