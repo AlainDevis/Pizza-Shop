@@ -1,8 +1,9 @@
 //business logic
-function Order(size,crust,toppings){
+function Order(size,crust,toppings,delivery){
     this.size = size;
     this.crust = crust;
     this.toppings = toppings;
+    this.delivery = delivery;
 
     if ( size == "Small Size"){
         this.sizePrice = 2000;
@@ -47,13 +48,19 @@ function Order(size,crust,toppings){
         this.toppingsPrice = 600;
     }
     if ( toppings == "Goat cheese with arugula and red onion"){
-        vthis.toppingsPrice = 800;
+        this.toppingsPrice = 800;
+    }
+    if(delivery == "Yes"){
+        this.deliveryPrice = 2000;
+    }
+    if(delivery == "No"){
+        this.deliveryPrice = 0;
     }
     // this.total = parseInt(this.sizePrice) + parseInt(this.crustPrice) + parseInt(this.toppingsPrice);
 }
 
 Order.prototype.totalPrice = function() {
-    return this.sizePrice + this.crustPrice + this.toppingsPrice;
+    return this.sizePrice + this.crustPrice + this.toppingsPrice + this.deliveryPrice;
 }
 
 //user interface logic
@@ -62,8 +69,10 @@ $(document).ready(function() {
         var sizePizza = $("select#size").val();
         var crustPizza = $("select#crust").val();
         var toppingPizza = $("select#toppings").val();
+        var deliveryPizza = $("select#delivery").val();
         //alert(sizePizza + " " + crustPizza + " " + toppingPizza);
-        var newOrder = new Order(sizePizza,crustPizza,toppingPizza);
+        var newOrder = new Order(sizePizza,crustPizza,toppingPizza,deliveryPizza);
+        alert(newOrder.deliveryPrice);
         // alert(newOrder.totalPrice());
 
         $("#show-order").show();
@@ -71,11 +80,13 @@ $(document).ready(function() {
         $(".pizza-size").text(newOrder.size +" "+ newOrder.sizePrice + "rwf");
         $(".pizza-crust").text(newOrder.crust +" "+ newOrder.crustPrice + "rwf" );
         $(".pizza-toppings").text(newOrder.toppings +" "+ newOrder.toppingsPrice + "rwf");
+        $(".delivery-option").text(newOrder.delivery +" "+ newOrder.deliveryPrice + "rwf");
         $(".pizza-total-amount").text(newOrder.totalPrice() + "rwf");
 
         document.getElementById('size').value="Select The Pizza";
         document.getElementById('crust').value="Select The Crust";
         document.getElementById('toppings').value="Select The Toppings";
+        document.getElementById('delivery').value="Select the delivery option";
         event.preventDefault();
 
         // var orders = [];

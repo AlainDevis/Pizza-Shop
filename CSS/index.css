@@ -87,6 +87,10 @@ body{
     width: 50%;
 }
 
+.Delivery{
+    width: 24%;
+}
+
 .btn1{
     margin-top: 10px;
 }
@@ -118,9 +122,6 @@ body{
     color: #ffffff;
 }
 
-#delivery{
-    margin-top: 10px;
-}
 .footer{
     height: 100px;
     background-color: #0a081f;
