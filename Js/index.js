@@ -75,6 +75,12 @@ $(document).ready(function() {
         alert(newOrder.deliveryPrice);
         // alert(newOrder.totalPrice());
 
+        if (deliveryPizza == "Yes" ){
+            var deliveryAddress = prompt("Enter your address");
+        }
+        
+        alert(deliveryAddress);
+
         $("#show-order").show();
         $("#show-order h2").text("Your Order");
         $(".pizza-size").text(newOrder.size +" "+ newOrder.sizePrice + "rwf");
