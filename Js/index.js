@@ -65,7 +65,11 @@ Order.prototype.totalPrice = function() {
 
 //user interface logic
 $(document).ready(function() {
-    $("button#orderbtn").click(function(event) {
+    // $("button#orderbtn").click(function(event) {
+       
+    // });
+
+    $("button#ordercheckout").click(function(event) {
         var sizePizza = $("select#size").val();
         var crustPizza = $("select#crust").val();
         var toppingPizza = $("select#toppings").val();
@@ -79,7 +83,15 @@ $(document).ready(function() {
             var deliveryAddress = prompt("Enter your address");
         }
         
-        alert(deliveryAddress);
+        // alert(deliveryAddress);
+        event.preventDefault();
+
+        // var orders = [];
+        // orders.push(newOrder);
+
+        if (deliveryPizza == "Yes" ){
+            alert("Your Order will be delivered on this location :" + deliveryAddress);
+        }
 
         $("#show-order").show();
         $("#show-order h2").text("Your Order");
@@ -94,16 +106,6 @@ $(document).ready(function() {
         document.getElementById('toppings').value="Select The Toppings";
         document.getElementById('delivery').value="Select the delivery option";
         event.preventDefault();
-
-        // var orders = [];
-        // orders.push(newOrder);
-    });
-
-    $("button#ordercheckout").click(function(event) {
-        orders.forEach(displayOrders);
-        function displayOrders() {
-            alert(orders);
-          }
     });
 
 });
